@@ -1,0 +1,92 @@
+ENVIRONMENT CHECKLIST - IT373 Week 1 Django Basic Setup
+=======================================================
+================================
+
+STEP 1: PROJECT FOLDER CREATION
+--------------------------------
+☑ Created project folder using: mkdir "IT373-Week1-Django-Basic-Setup"
+☑ Navigated to folder using: cd "IT373-Week1-Django-Basic-Setup"
+☑ Opened folder in VS Code using: code .
+☑ Folder structure initialized and ready
+
+STEP 2: PYTHON & TOOLING VERIFICATION
+--------------------------------------
+☑ Verified Python installation: python --version
+   → Python 3.11.9 confirmed ✓
+
+STEP 3: VIRTUAL ENVIRONMENT SETUP
+----------------------------------
+☑ Created virtual environment: python -m venv .venv
+☑ Activated virtual environment: .venv\Scripts\Activate
+
+STEP 4: DJANGO INSTALLATION
+----------------------------
+☑ Installed Django in virtual environment: pip install django
+☑ Verified Django installation: python -m django --version
+
+STEP 5: DJANGO PROJECT CREATION
+--------------------------------
+☑ Created Django project: django-admin startproject config .
+☑ Project created successfully in current directory
+
+STEP 6: DEVELOPMENT SERVER TEST
+-------------------------------
+☑ Started development server: python manage.py runserver
+☑ Opened browser to: http://127.0.0.1:8000/
+☑ Django welcome page displayed successfully
+☑ Server running without errors on port 8000
+
+STEP 7: DJANGO APP CREATION
+----------------------------
+☑ Created 'pages' app: python manage.py startapp pages
+☑ Added 'pages' to INSTALLED_APPS in config/settings.py
+
+STEP 8: TEMPLATE STRUCTURE SETUP
+---------------------------------
+☑ Created templates directory: mkdir pages\templates
+☑ Created pages subfolder: mkdir pages\templates\pages
+☑ Created base.html template with Bootstrap CDN integration
+☑ Template folder structure ready for template inheritance
+
+STEP 9: VIEWS IMPLEMENTATION
+----------------------------
+☑ Created views in pages/views.py:
+   - home(request) view with context data
+   - about(request) view for about page
+   - hello(request) view with course and week variables
+   
+STEP 10: TEMPLATE CREATION
+--------------------------
+☑ Created base.html with:
+   - HTML5 structure, Bootstrap CSS, navigation bar, footer
+   - {% block title %} and {% block content %} template blocks
+☑ Created home.html extending base.html with welcome content
+☑ Created about.html with student information:
+   - Name: Peter Jade Talabucon
+   - Student ID: 2023-09115
+☑ Created hello.html with context variables display
+☑ All templates properly extending base template
+
+STEP 11: URL ROUTING CONFIGURATION
+-----------------------------------
+☑ Created pages/urls.py with URL patterns:
+   - path('', views.home, name='home')
+   - path('about/', views.about, name='about')
+   - path('hello/', views.hello, name='hello')
+
+
+STEP 12: GIT VERSION CONTROL SETUP
+-----------------------------------
+☑ Initialized Git repository: git init
+☑ Created .gitignore file with Python/Django exclusions:
+   - .venv/, __pycache__/, *.pyc, db.sqlite3
+☑ Added all files: git add .
+☑ Created initial commit: git commit -m "Week1: initial Django scaffold"
+☑ Git repository successfully initialized
+
+STEP 13: GITHUB REPOSITORY CONNECTION
+--------------------------------------
+☑ Created GitHub repository: IT373-Week1-Django-Basic
+☑ Added remote origin: git remote add origin https://github.com/Peterrickk/IT373-Week1-Django-Basic.git
+☑ Pushed to GitHub: git push -u origin main
+☑ Repository successfully synced with GitHub
